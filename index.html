@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Collaborative Watermarking</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div class='section'>
+        <h1>Collaborative Watermarking for Adversarial Speech Synthesis</h1>
+        <p>Submitted to ICASSP 2024</p>
+        <br>
+        <p>Following <a href="https://datashare.ed.ac.uk/handle/10283/3443">VCTK dataset</a>, audio samples on this page are distributed following <a href="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons License: Attribution 4.0 International (CC BY 4.0)</a>.</p>
+        <p>Please select the utterance ID from the menu. The page will load the corresponding audio samples. </p>
+    </div>
+
+    <hr>
+    <div id='section-1' class='section'>
+        <select id='select-utterance'>
+            <option value="p257_101">p257_101</option>
+            <option value="p257_258">p257_258</option>
+            <option value="p257_279">p257_279</option>
+            <option value="p260_006">p260_006</option>
+            <option value="p260_073">p260_073</option>
+            <option value="p260_134">p260_134</option>
+            <option value="p260_161">p260_161</option>
+            <option value="p263_011">p263_011</option>
+            <option value="p263_013">p263_013</option>
+            <option value="p266_011">p266_011</option>
+            <option value="p266_255">p266_255</option>
+            <option value="p277_108">p277_108</option>
+            <option value="p277_186">p277_186</option>
+            <option value="p277_187">p277_187</option>
+            <option value="p277_194">p277_194</option>
+            <option value="p277_209">p277_209</option>
+            <option value="p277_245">p277_245</option>
+            <option value="p277_295">p277_295</option>
+            <option value="p277_348">p277_348</option>
+            <option value="p277_350">p277_350</option>
+            <option value="p277_392">p277_392</option>
+            <option value="p277_463">p277_463</option>
+            <option value="p280_020">p280_020</option>
+            <option value="p280_075">p280_075</option>
+            <option value="p280_087">p280_087</option>
+            <option value="p280_098">p280_098</option>
+            <option value="p280_167">p280_167</option>
+            <option value="p280_232">p280_232</option>
+            <option value="p280_295">p280_295</option>
+            <option value="p280_334">p280_334</option>
+            <option value="p282_004">p282_004</option>
+            <option value="p282_009">p282_009</option>
+            <option value="p282_073">p282_073</option>
+            <option value="p282_216">p282_216</option>
+            <option value="p282_242">p282_242</option>
+            <option value="p282_262">p282_262</option>
+            <option value="p282_294">p282_294</option>
+            <option value="p282_342">p282_342</option>
+            <option value="p282_352">p282_352</option>
+            <option value="p285_238">p285_238</option>
+            <option value="p285_245">p285_245</option>
+            <option value="p304_005">p304_005</option>
+            <option value="p304_009">p304_009</option>
+            <option value="p304_014">p304_014</option>
+            <option value="p304_019">p304_019</option>
+            <option value="p304_043">p304_043</option>
+            <option value="p333_018">p333_018</option>
+            <option value="p363_008">p363_008</option>
+            <option value="p363_012">p363_012</option>
+            <option value="p363_018">p363_018</option>
+        </select>
+
+        <div class='playlist'>
+
+            <table style="width:100%">
+              <tr>
+                <th style="width: 20%"></th> <th style="width: 20%"></th> <th style="width:30%"></th> <th style="width:30%"></th>
+              </tr>
+              <tr>
+                <td></td> <td>Natural recording</td> <td><audio preload='metadata' controls><source class='select-utterance'  src='https://users.aalto.fi/~ljuvela/cowama/listening_test_assets_prolific/audio/natural/p257_101.wav' type='audio/mpeg'></audio></td> <th></th>
+              </tr>
+              <tr>
+                <td></td> <td >Spectral patchwork watermark</td> <td><audio preload='metadata' controls><source class='select-utterance'  src='https://users.aalto.fi/~ljuvela/cowama/listening_test_assets_prolific/audio/audiowmark/p257_101.wav' type='audio/mpeg'></audio></td> <th></th>
+              </tr>
+              <tr>
+                <td></td> <td>Baseline HiFi-GAN</td> <td><audio preload='metadata' controls><source class='select-utterance'  src='https://users.aalto.fi/~ljuvela/cowama/listening_test_assets_prolific/audio/baseline/p257_101.wav' type='audio/mpeg'></audio></td> <th></th>
+              </tr>
+              <tr>
+                  <td><br></td>
+              </tr>
+
+              <tr>
+                <td>Training</td><td>Augmentation</td><td>LFCC-LCNN</td><td>RawNet</td>
+              </tr>
+              <tr>
+                <td>Joint</td><td>None</td><td><audio preload='metadata' controls><source class='select-utterance'  src='https://users.aalto.fi/~ljuvela/cowama/listening_test_assets_prolific/audio/LFCC-LCNN-collab-joint-none/p257_101.wav' type='audio/mpeg'></audio></td>
+                <td><audio preload='metadata' controls><source class='select-utterance'  src='https://users.aalto.fi/~ljuvela/cowama/listening_test_assets_prolific/audio/RawNet-collab-joint-none/p257_101.wav' type='audio/mpeg'></audio></td>
+              </tr>
+              <tr>
+                <td></td><td>Stretch+noise</td><td><audio preload='metadata' controls><source class='select-utterance'  src='https://users.aalto.fi/~ljuvela/cowama/listening_test_assets_prolific/audio/LFCC-LCNN-collab-joint-noise_stretch/p257_101.wav' type='audio/mpeg'></audio>
+                </td><td><audio preload='metadata' controls><source class='select-utterance'  src='https://users.aalto.fi/~ljuvela/cowama/listening_test_assets_prolific/audio/RawNet-collab-joint-noise_stretch/p257_101.wav' type='audio/mpeg'></audio></td>
+              </tr>
+              <tr>
+                <td>Pre-trained</td><td>None</td><td><audio preload='metadata' controls><source class='select-utterance'  src='https://users.aalto.fi/~ljuvela/cowama/listening_test_assets_prolific/audio/LFCC-LCNN-collab-pre-trained-none/p257_101.wav' type='audio/mpeg'></audio></td>
+                <td><audio preload='metadata' controls><source class='select-utterance'  src='https://users.aalto.fi/~ljuvela/cowama/listening_test_assets_prolific/audio/RawNet-collab-pre-trained-none/p257_101.wav' type='audio/mpeg'></audio></td>
+              </tr>
+              <tr>
+                <td></td><td>Stretch+noise</td><td><audio preload='metadata' controls><source class='select-utterance'  src='https://users.aalto.fi/~ljuvela/cowama/listening_test_assets_prolific/audio/LFCC-LCNN-collab-pre-trained-noise_stretch/p257_101.wav' type='audio/mpeg'></audio>
+                </td><td><audio preload='metadata' controls><source class='select-utterance'  src='https://users.aalto.fi/~ljuvela/cowama/listening_test_assets_prolific/audio/RawNet-collab-pre-trained-noise_stretch/p257_101.wav' type='audio/mpeg'></audio></td>
+              </tr>
+            </table>
+            
+        </div>
+    </div>
+
+    <hr>
+
+
+
+
+</body>
+</html>
+
+<script>
+document
+    .getElementById('select-utterance')
+    .addEventListener('change', function () {
+        'use strict';
+        var targets = document.getElementsByClassName("select-utterance")
+        for (let i = 0; i < targets.length; i++) {
+            name = targets[i].getAttribute("src")
+            name = name.substring(0, name.lastIndexOf("/"))
+            name = name + "/" + this.value + ".wav"
+            targets[i].setAttribute("src", name)
+            targets[i].parentElement.load()
+        }
+});
+</script>
